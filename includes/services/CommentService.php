@@ -12,6 +12,7 @@ class CommentService
     protected $dbService;
     protected $aclService;
     protected $pageManager;
+    protected $hashcashService;
     protected $params;
     protected $pagesWhereCommentWereRendered;
     protected $commentsActivated;
@@ -21,12 +22,14 @@ class CommentService
         DbService $dbService,
         AclService $aclService,
         PageManager $pageManager,
+        HashCashService $hashcashService,
         ParameterBagInterface $params
     ) {
         $this->wiki = $wiki;
         $this->dbService = $dbService;
         $this->aclService = $aclService;
         $this->pageManager = $pageManager;
+        $this->hashcashService = $hashcashService;
         $this->params = $params;
         $this->pagesWhereCommentWereRendered = [];
         $this->commmentsActivated = $this->params->get('comments_activated');
@@ -42,8 +45,7 @@ class CommentService
         } else {
             if ($this->wiki->HasAccess("comment", $content['pagetag']) && $this->wiki->Loadpage($content['pagetag'])) {
                 if ($this->params->get('use_hashcash')) {
-                    require_once('tools/security/secret/wp-hashcash.lib');
-                    if (!isset($content["hashcash_value"]) || ($content["hashcash_value"] != hashcash_field_value())) {
+                    if (!isset($content["hashcash_value"]) || ($content["hashcash_value"] != $this->hashcashService->hashcash_field_value())) {
                         return [
                             'code' => 400,
                             'error' => _t('HASHCASH_COMMENT_NOT_SAVED_MAYBE_YOU_ARE_A_ROBOT')

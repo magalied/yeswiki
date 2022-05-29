@@ -210,6 +210,7 @@ class Mailer
 
     private function getBaseUrl(): string
     {
+        // TODO: use getBaseUrl from core unless there is a trap ?
         return preg_replace('/(\\/wakka\\.php\\?wiki=|\\/\\?wiki=|\\/\\?|\\/)$/m', '', $this->params->get('base_url')) ;
     }
 

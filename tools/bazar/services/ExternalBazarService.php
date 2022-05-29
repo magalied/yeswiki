@@ -54,7 +54,7 @@ class ExternalBazarService
     protected $entryManager ;
     protected $importService ;
     protected $wiki ;
-
+    protected $cachePath;
     
     protected $newFormId;
     protected $tmpForm ;
@@ -70,6 +70,7 @@ class ExternalBazarService
         ImportService $importService
     ) {
         $this->wiki = $wiki;
+        $this->cachePath = (!empty($this->wiki->config['dataPath'])) ? $this->wiki->config['dataPath'].'/cache' : 'cache';
         $this->params = $params;
         $this->formManager = $formManager;
         $this->importService = $importService;
@@ -101,7 +102,7 @@ class ExternalBazarService
         if ($checkUrl) {
             $url= $this->formatUrl($url);
         }
-        $urlDetails = $this->getUrlDetails($url, $refresh  ? 0 : $this->timeCacheToRefreshForms);
+        $urlDetails = $this->getUrlDetails($url, $refresh  ? 0 : $this->timeCacheToRefreshForms, $this->cachePath);
         if (empty($urlDetails)) {
             if ($this->debug) {
                 trigger_error(get_class($this)."::getForm: "._t('BAZ_EXTERNAL_SERVICE_BAD_URL'));
@@ -260,7 +261,7 @@ class ExternalBazarService
             } else {
                 $distantFormId = $form['external_bn_id_nature'];
                 
-                $urlDetails = $this->getUrlDetails($url, $this->timeCacheToCheckChanges);
+                $urlDetails = $this->getUrlDetails($url, $this->timeCacheToCheckChanges, $this->cachePath);
                 if (empty($urlDetails)) {
                     if ($this->debug) {
                         trigger_error(get_class($this)."::getEntries: "._t('BAZ_EXTERNAL_SERVICE_BAD_URL'));
@@ -755,7 +756,7 @@ class ExternalBazarService
      */
     private function cleanOldCacheFiles()
     {
-        $cacheFiles = glob('cache/'.self::CACHE_FILENAME_PREFIX.'*');
+        $cacheFiles = glob($this->cachePath.'/'.self::CACHE_FILENAME_PREFIX.'*');
         foreach ($cacheFiles as $filePath) {
             $filemtime = @filemtime($filePath);  // returns FALSE if file does not exist
             if (!$filemtime or (time() - $filemtime >= self::MAX_CACHE_TIME)) {

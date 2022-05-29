@@ -1,8 +1,8 @@
 <?php
-/*
-*/
 
 use YesWiki\Security\Controller\SecurityController;
+use YesWiki\Security\Service\HashCashService;
+
 if (!defined('WIKINI_VERSION')) {
     die('acc&egrave;s direct interdit');
 }
@@ -19,8 +19,8 @@ if ($this->HasAccess('write') && $this->HasAccess('read')) {
   
     if ($this->config['use_hashcash']) {
         if (isset($_POST['submit']) && $_POST['submit'] == 'Sauver') {
-            require_once 'tools/security/secret/wp-hashcash.lib';
-            if (!isset($_POST['hashcash_value']) || $_POST['hashcash_value'] != hashcash_field_value()) {
+            $hashcashService = $this->services->get(HashCashService::class);
+            if (!isset($_POST['hashcash_value']) || $_POST['hashcash_value'] != $hashcashService->hashcash_field_value()) {
                 $error = '<div class="alert alert-danger"><a href="#" data-dismiss="alert" class="close">&times;</a>'._t('HASHCASH_ERROR_PAGE_UNSAVED').'</div>';
                 $_POST['submit'] = '';
             }

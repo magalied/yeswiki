@@ -176,11 +176,14 @@ test(
 );
 mysqli_autocommit($dblink, true);
 
+// get path is src and data are separated
+$dataPath = (!empty($_SERVER['YESWIKI_DATA_PATH']) && is_dir($_SERVER['YESWIKI_DATA_PATH'])) ? $_SERVER['YESWIKI_DATA_PATH'].'/' : '';
+
 // Config indexation by robots
 if (!isset($config['allow_robots']) || $config['allow_robots'] != '1') {
     // update robots.txt file
-    if (file_exists('robots.txt')) {
-        $robotFile = file_get_contents('robots.txt');
+    if (file_exists($dataPath.'robots.txt')) {
+        $robotFile = file_get_contents($dataPath.'robots.txt');
         // Append User-agent
         $strToAppend = 'User-agent: *';
         $endLine = "\n";
@@ -199,7 +202,7 @@ if (!isset($config['allow_robots']) || $config['allow_robots'] != '1') {
         $robotFile .= "Disallow: /\r\n";
     }
     // save robots.txt file
-    file_put_contents('robots.txt', $robotFile);
+    file_put_contents($dataPath.'robots.txt', $robotFile);
 
     // set meta
     $config['meta'] = array_merge(

@@ -7,7 +7,7 @@ if (!defined("WIKINI_VERSION")) {
 
 require_once 'tools/templates/libs/setwikidefaulttheme.functions.php';
 
-if (!is_writable('wakka.config.php')) {
+if (!is_writable($this->configFile)) {
     echo '<div class="alert alert-danger">'
         . _t('ERROR_NO_ACCESS')
         . " setwikidefaulttheme, "._t('FILE_WRITE_PROTECTED')."</div>\n";
@@ -15,7 +15,7 @@ if (!is_writable('wakka.config.php')) {
     if ($this->UserIsAdmin()) {
         $themes = getTemplatesList();
         include_once 'tools/templates/libs/Configuration.php';
-        $config = new Configuration('wakka.config.php');
+        $config = new Configuration($this->configFile);
         $config->load();
 
         if (isset($_POST['action']) and $_POST['action'] === 'setTemplate') {

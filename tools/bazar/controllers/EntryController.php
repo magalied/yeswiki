@@ -269,7 +269,6 @@ class EntryController extends YesWikiController
             'passwordForEditing' => isset($this->config['password_for_editing']) && !empty($this->config['password_for_editing']) && isset($_POST['password_for_editing']) ? $_POST['password_for_editing'] : '',
             'error' => $error,
             'captchaField' => $this->securityController->renderCaptchaField(),
-            'containUpload' => $this->inputsAreContainingUpload($renderedInputs),
             'imageSmallWidth' => $this->config['image-small-width'],
             'imageSmallHeight' => $this->config['image-small-height'],
             'imageMediumWidth' => $this->config['image-medium-width'],
@@ -315,7 +314,6 @@ class EntryController extends YesWikiController
             'passwordForEditing' => isset($this->config['password_for_editing']) && !empty($this->config['password_for_editing']) && isset($_POST['password_for_editing']) ? $_POST['password_for_editing'] : '',
             'error' => $error,
             'captchaField' => $this->securityController->renderCaptchaField(),
-            'containUpload' => $this->inputsAreContainingUpload($renderedInputs),
             'imageSmallWidth' => $this->config['image-small-width'],
             'imageSmallHeight' => $this->config['image-small-height'],
             'imageMediumWidth' => $this->config['image-medium-width'],
@@ -324,13 +322,6 @@ class EntryController extends YesWikiController
             'imageBigHeight' => $this->config['image-big-height'],
             
         ]);
-    }
-
-    private function inputsAreContainingUpload(array $renderedInputs): bool
-    {
-        return !empty(array_filter($renderedInputs, function ($renderedInput) {
-            return !empty($renderedInput) && (strpos($renderedInput, "<!-- include_javascript('tools/attach/libs/fileuploader.js') -->") !== false);
-        }));
     }
 
     public function delete($entryId)

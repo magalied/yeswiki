@@ -1,7 +1,7 @@
 Prise en main
 ============
 
-> **Pour décrouvrir les fonctionalités de base d'un wiki**
+> **Pour découvrir les fonctionalités de base d'un wiki**
 > * Quelques trucs si l'informatique vous fait peur Pour moi, page inutile
 >
 > **Ajouter et modifier des contenus**
@@ -32,9 +32,9 @@ Si une page est ouverte à l'édition, vous trouverez un bouton en bas de page p
 
 ### Mise en forme
 
-La plupart des mises en forme standard (gras, encadré, saut de ligne...) sont accessible via les boutons de l'éditeur. Voici quelques mise en formes supplémentaires
+La plupart des mises en forme standard (gras, encadré, saut de ligne...) sont accessibles via les boutons de l'éditeur. Voici quelques mises en forme supplémentaires
 
-!> TODO: reprendre tous les exemples de l'aide de YesWiki ici (ReglesDeFormatage), et modifier cette page pour qqu'elle pointe vers cette nouvelle doc
+!> TODO: reprendre tous les exemples de l'aide de YesWiki ici (ReglesDeFormatage), et modifier cette page pour qu'elle pointe vers cette nouvelle doc
 
 !> TODO: est ce que la partie composant buttons + mise en forme ne pourrait pas venir ici?
 
@@ -77,23 +77,23 @@ Si vous déposez du HTML dans la page wiki, il faut l'entourer de `""` pour qu'i
 Créer une page / insérer un lien
 -------------------------------
 
-!> **Règle de nommage** : le nom des pages YesWiki ne doivent contenir ni espaces ni caractères spéciaux. Pour les rendre lisible, le mieux est d'utiliser des tirets `nom-de-ma-page`, ou des majuscules `NomDeLaPage` (c'est ce qu'on appelle un `ChatMot`)
+!> **Règle de nommage** : le nom des pages YesWiki ne doivent contenir ni espaces ni caractères spéciaux. Pour les rendre lisibles, le mieux est d'utiliser des tirets `nom-de-ma-page`, ou des majuscules `NomDeLaPage` (c'est ce qu'on appelle un `ChatMot`)
 
 **Deux méthodes sont à votre disposition pour créer une page**
 
-1. Lors de l'édition d'une page, cliquez le l'icone pour ajouter un lien. Dans la fenêtre qui s'ouvre, mettez le nom de votre nouvelle page yeswiki, elle sera crée automatiquement
-2. Allez directement vers l'URL de la page que vous souhaitez créer (exemple : https://yeswiki.net/?MaNouvellePage). Comme elle n'existe pas encore on vous proposera de la créer
+1. Lors de l'édition d'une page, cliquez sur l'icône pour ajouter un lien. Dans la fenêtre qui s'ouvre, mettez le nom de votre nouvelle page yeswiki, elle sera créée automatiquement
+2. Allez directement vers l'URL de la page que vous souhaitez créer (exemple : https://yeswiki.net/?MaNouvellePage). Comme elle n'existe pas encore, on vous proposera de la créer.
 
 > Astuce 1: une fois ma nouvelle page créée, je peux enlever le lien qui y mène sans que la page disparaisse pour autant. Je peux retrouver mes pages dans la roue crantée en haut à droite > Tableau de bord. Une bonne manière de cacher des pages ;-)
 
-> Astuce 2: YesWiki va interpréter tout ChatMot comme une nouvelle page. Si on veut écrire un ChatMot sans créer de nouvelle page (par exemple pour écrire YesWiki sans créer de lien), on l'encadre de double guillemets:
+> Astuce 2: YesWiki va interpréter tout ChatMot comme une nouvelle page. Si on veut écrire un ChatMot sans créer de nouvelle page (par exemple pour écrire YesWiki sans créer de lien), on l'encadre de double guillemets: `""`
 
 Revenir à la version précédente d'une page
 -------------------------------------------
 
-Dans YesWiki chaque modification d'une page est sauvegardée dans un **historique**. Par défaut il est possible de voir les 30 versions antérieures d'une page et, ce qui est souvent bien pratique, de restaurer une version antérieure.
+Dans YesWiki, chaque modification d'une page est sauvegardée dans un **historique**. Par défaut, il est possible de voir les 30 versions antérieures d'une page et, ce qui est souvent bien pratique, de restaurer une version antérieure.
 
-**Pour y accéder** il suffit de cliquer sur le lien en bas de page nommé : "Dernière édition : _jour_._mois_._année_"
+**Pour y accéder** il suffit de cliquer sur le lien en bas de page nommée : "Dernière édition : _jour_._mois_._année_"
 
 > Attention: cet accès est possible pour les personnes qui ont les droits en écriture sur la page concernée, c'est-à-dire tout le monde par défaut, mais les administrateurs du site peuvent faire un autre choix.
 
@@ -106,23 +106,22 @@ Insérer un média (images/pdf/...)
 !> Décrire comment faire pour utiliser une image d'une page dans une autre
 
 
-En plus du texte, on peut vouloir ajouter des images, des documents à télécharger, voire des vidéos ou des fichiers audio. Avec YesWiki ceci est très facile ! Voici comment faire.
+En plus du texte, on peut vouloir ajouter des images, des documents à télécharger, voire des vidéos ou des fichiers audio. Avec YesWiki, ceci est très facile ! Voici comment faire.
 
-Dans la page en mode édition, cliquer sur le bouton "Fichier" permet de choisir un fichier qui se trouve sur votre ordinateur. (listes fichiers affichables)  (svg, png, gif, jpg, bmp...) (.doc, .pdf, .xls, .odt, .txt...) mp3 flv
+Dans la page en mode édition, cliquer sur le bouton "Fichier" permet de choisir un fichier qui se trouve sur votre ordinateur. (listes fichiers affichables : (svg, png, gif, jpg, bmp...) (.doc, .pdf, .xls, .odt, .txt...) (mp3, flv)
 => ce qui sera interprété et ce qui fera un lien de téléchargement
 
 En fonction du type de fichier à insérer, YesWiki propose des interfaces différentes, mais le principe reste le même.
 
-> Astuce: pour les fichiers vidéos, ou interactif type pad -> mettre lien vers une aure section dédiée
+> Astuce: pour les fichiers vidéos, ou interactif type pad -> mettre un lien vers une autre section dédiée
 
 
 Insérer des éléments d'un autre site (iframe)
 ---------------------------------------
 
-> Une **iframe** est un petit bout de code qui permet à une page d'embarquer (encapsuler, intégrer... _embed_ en anglais) des contenus et fonctionalités issus d'autres sites internet.
+> Un **iframe** est un petit bout de code qui permet à une page d'embarquer (encapsuler, intégrer... _embed_ en anglais) des contenus et fonctionalités issus d'autres sites internet.
 
 Vous pouvez ainsi profiter des fonctionnalités de cet autre site au sein même de votre wiki : lire une vidéo, écrire dans un pad et bien d'autre... Voici comment faire :
-
 
 ### Trouver le code iframe permettant l'intégration
 
@@ -132,9 +131,9 @@ On le trouve souvent dans les options _Partager_, _Intégrer_ ou encore _iframe_
 <iframe src="https://unsite.com/iframe" ...></iframe>
 ```
 
-### Collez ce code dans la page wiki
+### Coller ce code dans la page wiki
 
-Il faudra juste penser à ajouter avant et après **deux guillemets**.
+Il faudra juste penser à ajouter avant et après des **double guillemets**.
 
 ```
 ""<iframe src="https://unsite.com/iframe" ...></iframe>""
@@ -169,30 +168,30 @@ Les composants
 !> TODO: L'idée était de juste lister les composants disponibles pour qu'on puisse les trouver en cherchant dans le moteur de recherche de la doc. A voir si on garde ça ou si plutôt on réserve cette section a des descriptions de composants avancés (y'aurait quoi par exemple?)
 
 Les composants sont des éléments que l'on peut rajouter dans une page wiki.
-Utiliser les composants ajoutera un code -parfois compliqué-  dans votre page. En cliquant sur ce code, un crayon apparaîtra dans la marge. En cliquant dessus, vous activerez une interface qui codera à votre place afin de modifier simplement chacune des fonctionnalités de votre composant.
+Utiliser les composants ajoutera un code -parfois compliqué-  dans votre page. En cliquant sur ce code (positionner le curseur sur la ligne de code), un crayon apparaîtra dans la marge. En cliquant dessus, vous activerez une interface qui codera à votre place afin de modifier simplement chacune des fonctionnalités de votre composant.
 
 ### Boutons
 
-Le composant bouton permet de créer un bouton avec des icônes, qui enverra sur une page du wiki ou un autre site. Les combinaisons entre les différents paramètres vous permettrons de faire bouton à votre pied.
+Le composant bouton permet de créer un bouton avec des icônes, qui enverra sur une page du wiki ou un autre site. Les combinaisons entre les différents paramètres vous permettront de faire un bouton "à votre pied".
 
 ### Mise en forme (mise en page)
 
-Mise en forme propose 6 possibilités :
+Le composant Mise en forme propose 6 possibilités :
 
-* Étiquette : mettre en avant un texte au travers d’une couleur de fond.
-* Onglets : créer des onglets dans une page, permet d’obtenir des sous menus horizontaux ou verticaux.
+* Étiquette : mettre en avant un texte par l'intermédiaire d’une couleur de fond.
+* Onglets : créer des onglets dans une page, permet d’obtenir des sous-menus horizontaux ou verticaux.
 * Encadré : encadrer un texte ou proposer un encadré qui se ferme quand on clique sur son titre.
- * Section : couteau suisse de mise en forme, permet d’encadrer un paragraphe, de lui adjoindre une couleur ou une image de fond et beaucoup d’autres combinaisons.
- * Afficher des encadrés en accordéon : déclinaison d’encadré, accordéon permet de chaîner plusieurs encadrés, quand vous ouvrez un encadré, ça ferme les autres.
- * Afficher en plusieurs colonnes : permet de créer plusieurs colonnes dans une page ou une partie de page, très utile pour des mises en page avancées.
+* Section : c'est un couteau suisse de mise en forme qui permet d’encadrer un paragraphe, de lui adjoindre une couleur ou une image de fond et beaucoup d’autres combinaisons.
+* Afficher des encadrés en accordéon : c'est une déclinaison d’encadré. Accordéon permet de chaîner plusieurs encadrés, quand vous ouvrez un encadré, ça ferme les autres.
+* Afficher en plusieurs colonnes : permet de créer plusieurs colonnes dans une page ou une partie de page, très utile pour des mises en page avancées.
 
 ### Syndication / Flux RSS
 
-Permet d'afficher des informations arrivant de sites internet externe, permet de créer une page de veille.
+Permet d'afficher des informations arrivant de sites internet externes. Cela permet de créer une page de veille, par exemple.
 
 ### Gestion des tags
 
-Dans chaque page (en bas en mode édition) ou fiche d’un formulaire, vous pouvez ajouter des mots clefs ou tags. Gestion des tags vous propose 3 actions :
+Dans chaque page (en bas en mode édition) ou fiche d’un formulaire, vous pouvez ajouter des mots clés ou tags. Le composant Gestion des tags vous propose 3 actions :
 
  * Créer une liste des pages par tag
  * Nuage de tags
@@ -200,7 +199,7 @@ Dans chaque page (en bas en mode édition) ou fiche d’un formulaire, vous pouv
 
 ### Réactions / Votes
 
-Ce composant vous offre trois possibilités :
+Ce composant permet d'ajouter en bas d'une page des icônes pour permettre aux usagers de réagir. Il vous offre trois possibilités :
 
 * Réactions et votes
 * Réactions de l'utisateur.ice connecté.e
@@ -208,11 +207,11 @@ Ce composant vous offre trois possibilités :
 
 ### Vidéo intégrée
 
-afficher une vidéo proposée par PeerTube, Viméo ou Youtube à partir de son identifiant.
+Afficher une vidéo proposée par PeerTube, Viméo ou Youtube à partir de son identifiant.
 
 ### Actions d'envoi d'e-mail/listes
 
-permet 3 actions :
+Le composant permet 3 actions :
 
 * Afficher un formulaire de contact
 * S’abonner à une liste de discussion (qui devra être créée par ailleurs)
@@ -220,14 +219,14 @@ permet 3 actions :
 
 ### Afficher les données d'un formulaire
 
-Afficher les données d’un formulaire : véritable logiciel dans YesWiki, le gestionnaire de formulaire vous permet d’en créer mais ensuite d’afficher les résultats. Avec cette action, vous pourrez afficher les données des 4 formulaires fournis par défaut :
+Afficher les données d’un formulaire est un véritable logiciel dans YesWiki. Le gestionnaire de formulaire vous permet d’en créer puis d’afficher les résultats. Avec cette action, vous pourrez afficher les données des 4 formulaires fournis par défaut :
 
 * Annuaire
 * Agenda
 * Blog-Actu
 * Ressources
 
-Vous pourrez bien sûr afficher les données des formulaires que vous aurez fabriqués. Il vous suffira de choisir le formulaire qui vous intéresse puis de choisir parmi les formes de restitution des résultats : Liste, Blocs, Cartographie, Calendrier, Agenda, Annuaire , Time Line, Carousel, Photobox, Liste de liens, Blog, Tableau.
+Vous pourrez bien sûr afficher les données des formulaires que vous aurez créez vous-même. Il vous suffira de choisir le formulaire qui vous intéresse puis de choisir parmi les formes de restitution des résultats : Liste, Blocs, Cartographie, Calendrier, Agenda, Annuaire , Time Line, Carousel, Photobox, Liste de liens, Blog, Tableau.
 
 ### Afficher un formulaire de création de fiche
 
@@ -249,8 +248,8 @@ De nombreuses autres actions sont disponibles, en voici la liste :
 #### Afficher mes pages
 #### Afficher le contenu du fichier de configuration
 #### Lister les utilisateurs, utilisatrices
-#### Liste les derniers changements
-#### Liste les derniers commentaires
+#### Lister les derniers changements
+#### Lister les derniers commentaires
 #### Lister toutes les pages
 #### Lister toutes les pages sauf les fiches bazar
 #### Lister les pages à créer
@@ -262,13 +261,13 @@ Structure du wiki
 
 ### La composition d'une page 
 
-#### Par défaut une page wiki contient :
+#### Par défaut, une page wiki contient :
 
 *   une **Page Titre** : c'est le nom du wiki
 *   une **Page Menu Haut** : on peut y ajouter des liens vers les pages du wiki (menu et sous-menu)
 *   une **Page Rapide Haut** : il s'agit des pages d'administration du wiki, la roue crantée en haut à droite
 *   une **Page Header** : c'est une partie utile pour écrire le titre donné au wiki, ajouter une description, un logo...
-*   une **Page Footer** : autrement dit un pied de page, où se trouvent diverses informations au sujet due wiki
+*   une **Page Footer** : autrement dit un pied de page, où se trouvent diverses informations au sujet du wiki
 
 ![image composition_page.jpg](images/composition_page.jpg)
 
@@ -284,7 +283,7 @@ Dans la page Gestion du site, on retrouve les liens vers toutes les pages citée
 
 ![image composition_url.png](images/composition_url.png)
 
-Pour les menus par défaut ces url sont :  
+Pour les menus par défaut, ces url sont :  
 
 *   https://www.urldusite.ext/PageTitre
 *   https://www.urldusite.ext/PageMenuHaut
@@ -353,6 +352,7 @@ Dans le tableau de bord, vous pouvez voir :
 * la liste exhaustive des pages du wiki
 
 C'est le tableau de bord configuré par défaut mais vous pouvez le personnaliser.
+!> TODO : Faire un lien vers "personnaliser le tableau de bord"
 
 #### Base de données
 

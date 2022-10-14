@@ -24,5 +24,5 @@ YesWiki dispose de **nombreux "thèmes"** permettant d'agir sur le graphisme gé
 ## Obtenir un YesWiki
 Yeswiki peut s'installer sur [un serveur web classique ou en local](webmaster.md)
 
-Des "fermes à wikis" offrent aussi la possibilité d'obtenir un wiki de test
+Des "fermes à wikis" offrent aussi la possibilité d'obtenir un wiki de test.
 

@@ -319,7 +319,7 @@ Il va falloir adapter quelques points et sauver ensuite
 
 ## Réparer la structure de vos bases de données
 
-_Lorsque la structure de vos bases de données n'est pas correcte, des soucis peuvent survenir en particuliers lors de la création ou la modification des listes._
+_Lorsque la structure de vos bases de données n'est pas correcte, des soucis peuvent survenir en particulier lors de la création ou la modification des listes._
 
  1. tenter de forcer la finalisation d'une mise à jour avec le handler `/update` (accessible avec [ce lien](?GererMisesAJour/update 'Forcer la finalisation de la mise à jour :ignore'))
  2. si ça ne fonctionne pas:
